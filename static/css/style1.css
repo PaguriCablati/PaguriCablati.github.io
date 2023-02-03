@@ -1,0 +1,10 @@
+body{
+    text-align: center;
+    margin: auto;
+}
+
+.chart-wrapper{
+    margin: auto;
+    width: 60%;
+    height: 40%;
+}
