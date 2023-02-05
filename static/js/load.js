@@ -1,3 +1,4 @@
+const header = `
 <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #fff;">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.html">
@@ -16,7 +17,7 @@
             Dropdown
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" type="button" onclick="document.g">Charts</a></li>
+            <li><a class="dropdown-item" href="charts.html">Charts</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -29,3 +30,13 @@
     </div>
   </div>
 </nav>
+`
+
+document.getElementById("header").innerHTML = header
+/*
+async function main(){
+  const response = await fetch("header.html");
+  document.getElementById("header").innerHTML = await response.text();
+}
+
+main()*/
