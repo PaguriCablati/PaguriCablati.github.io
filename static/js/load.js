@@ -1,4 +1,4 @@
-/*const header = `
+const header = `
 <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #fff;">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.html">
@@ -32,11 +32,11 @@
 </nav>
 `
 
-document.getElementById("header").innerHTML = header*/
-
+document.getElementById("header").innerHTML = header
+/*
 async function main(){
-  const response = await fetch("paguricablati.github.io/header.html");
+  const response = await fetch("header.html");
   document.getElementById("header").innerHTML = await response.text();
 }
 
-main()
+main()*/
