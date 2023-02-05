@@ -3,7 +3,12 @@ body{
     margin: auto;
 }
 
+.chart-row{
+    margin-top: 50px;
+}
+
 .chart-wrapper{
+    display: inline;
     margin: auto;
     width: 60%;
     height: 40%;
