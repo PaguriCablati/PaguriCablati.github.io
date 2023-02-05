@@ -32,7 +32,7 @@ const header = `
 </nav>
 `
 
-document.getElementById("header").innerHTML = header
+//document.getElementById("header").innerHTML = header
 /*
 async function main(){
   const response = await fetch("header.html");
