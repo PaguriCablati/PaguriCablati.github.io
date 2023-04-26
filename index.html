@@ -12,13 +12,24 @@
       #refs a{
         text-decoration: none;
       }
+      .ref{
+        animation: 2.5s paused highlight
+      }
+      @keyframes highlight{
+        1%{
+          background-color:red;
+        }
+        100%{
+          background-color: transparent;
+        }
+      }
     </style>
   </head>
   <body>
     <header id="header">
     </header>
-    <div class="container" style="margin-top: 50px; margin-left: 50px;">
-      <div class="index" style="float: left; position: sticky; top:50px; left:20px;">
+    <div class="container" style="margin-top: 50px; margin-left: 50px; position: sticky; top: 50px;">
+      <div class="index">
         <ol>
           <li>
             <p>
@@ -71,17 +82,17 @@
                     Le nostre ricerche ci hanno dato un’idea più chiara sulla condizione dei lavori
                     e sull’effettiva condizione della velocità di rete nel Comune di Trapani,
                     anche rispetto ad altri importanti centri urbani
-                    <sup><a href="#n1" id="r1">[1]</a></sup>
-                    <sup><a href="#n2" id="r2">[2]</a></sup>
+                    <sup><a class="ref" href="#n1" id="r1">[1]</a></sup>
+                    <sup><a class="ref" href="#n2" id="r2">[2]</a></sup>
                   </p>
                 </div>
               </div>
             </div>
-            <div class="timeline-2 right-2">
+            <div class="timeline-2 right-2" id="ch2">
               <div class="card">
                 <img src="static/pics/grafici.png" class="card-img-top"
                   alt="Responsive image">
-                <div class="card-body p-4" id="ch2">
+                <div class="card-body p-4">
                   <h4 class="fw-bold mb-4">Fase 2: ANALIZZARE</h4>
                   <p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i>6 Feb. 2023</p>
                   <p class="mb-0">
@@ -91,7 +102,7 @@
                   <p class="mb-0">
                     Volendo confrontare i dati ufficiali con l'esperienza comunitaria tramite un questionario pubblico,
                     abbiamo chiesto ai soggetti interessati la qualità ed il tipo della loro connessione,
-                    oltre alla conoscenza sullo stato dei lavori<sup><a href="#n3" id="r3">[3]</a></sup>.
+                    oltre alla conoscenza sullo stato dei lavori<sup><a class="ref" href="#n3" id="r3">[3]</a></sup>.
                   </p>
                   <p class="mb-0">
                     Nel mentre, alcuni nostri membri hanno raccolto fotografie e video
@@ -105,7 +116,7 @@
                     </ul>
                   </p>
                   <p>
-                    Infine, abbiamo creato un video-report dove sono stati inclusi i risultati delle nostre ricerche<sup><a href="#n4" id="r4">[4]</a></sup>.
+                    Infine, abbiamo creato un video-report dove sono stati inclusi i risultati delle nostre ricerche<sup><a class="ref" href="#n4" id="r4">[4]</a></sup>.
                   </p>
                 </div>
               </div>
@@ -143,16 +154,16 @@
           <h2>NOTE</h2>
           <ol>
             <li>
-              <p><a href="#r1" id="n1">^</a> -> <a href="https://infogram.com/infografica-dinamica-1hd12yxqr30dw6k" target="_blank">Istogramma dell'infografica</a></p>
+              <p><a href="#r1" id="n1" onclick="high_ref(this.href)">^</a> -> <a href="https://infogram.com/infografica-dinamica-1hd12yxqr30dw6k" target="_blank">Istogramma dell'infografica</a></p>
             </li>
             <li>
-              <p><a href="#r2" id="n2">^</a> -> <a href="https://bandaultralarga.italia.it" target="_blank">bandaultralarga.italia.it</a></p>
+              <p><a href="#r2" id="n2" onclick="high_ref(this.href)">^</a> -> <a href="https://bandaultralarga.italia.it" target="_blank">bandaultralarga.italia.it</a></p>
             </li>
             <li>
-              <p><a href="#r3" id="n3">^</a> -> <a href="data1.html">Risultati sondaggio fibra ottica</a><p></p>
+              <p><a href="#r3" id="n3" onclick="high_ref(this.href)">^</a> -> <a href="data1.html">Risultati sondaggio fibra ottica</a><p></p>
             </li>
             <li>
-              <p><a href="#r4" id="n4">^</a> -> <a href="https://www.youtube.com/watch?v=166HQLPAM3A" target="_blank">Video report</a><p></p>
+              <p><a href="#r4" id="n4" onclick="high_ref(this.href)">^</a> -> <a href="https://www.youtube.com/watch?v=166HQLPAM3A" target="_blank">Video report</a><p></p>
             </li>
           <ol>
         </div>
@@ -160,6 +171,12 @@
     </div>
 		<embed type="text/html" src="footer.html" width="100%" height="100%" style="margin:auto;">
     <script src="static/js/load.js"></script>
+    <script>
+      function high_ref(id){
+        var elem = document.getElementById(id.split("#")[1]);
+        elem.getAnimations()[0].play();
+      }
+    </script>
   </body>
 </html>
 *
